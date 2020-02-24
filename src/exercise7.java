@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class exercise7 {
     public static void main(String[] args) {
         double[][] points = {{-1, 0, 3}, {-1, -1, -1}, {4, 1, 1},
