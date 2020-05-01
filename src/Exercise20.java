@@ -20,7 +20,7 @@ public class Exercise20 {
                     System.out.print("yellow");
                 System.out.print(" disk at column (0–6): ");
                 column = input.nextInt();
-            }while (!makeTurn(field, column, counter % 2));
+            } while (!makeTurn(field, column, counter % 2));
             counter++;
         }
         System.out.println("-----------------------------------");
@@ -52,22 +52,25 @@ public class Exercise20 {
         }
 
         for (int k = 0; k < values.length - 3; k++) {
-            for (int i = 0; i < values.length; i++) {
-                if (values[k][i] == values[k + 1][i] && values[k][i] == values[k + 2][i] && values[k][i] == values[k + 3][i] && values[k][i] != ' ')
+            for (int i = 0; i < values[k].length; i++) {
+                if (values[k][i] == values[k + 1][i] && values[k][i] == values[k + 2][i] &&
+                        values[k][i] == values[k + 3][i] && values[k][i] != ' ')
                     return true;
             }
         }
 
-        for (int k = 0; k < values.length - 3; k++) {
-            for (int i = 0; i < values.length - 3; i++) {
-                if (values[k][i] == values[k + 1][i + 1] && values[k][i] == values[k + 2][i + 2] && values[k][i] == values[k + 3][i + 3] && values[k][i] != ' ')
+        for (int k = 0; k < values[k].length - 3; k++) {
+            for (int i = 0; i < values[k].length - 3; i++) {
+                if (values[k][i] == values[k + 1][i + 1] && values[k][i] == values[k + 2][i + 2] &&
+                        values[k][i] == values[k + 3][i + 3] && values[k][i] != ' ')
                     return true;
             }
         }
 
         for (int k = 0; k < values.length - 3; k++) {
             for (int i = values.length - 4; i >= 0; i--) {
-                if (values[k][i + 3] == values[k + 1][i + 2] && values[k][i+3] == values[k + 2][i + 1] && values[k][i+3] == values[k + 3][i] && values[k][i] != ' ')
+                if (values[k][i + 3] == values[k + 1][i + 2] && values[k][i + 3] == values[k + 2][i + 1] &&
+                        values[k][i + 3] == values[k + 3][i] && values[k][i] != ' ')
                     return true;
             }
         }
