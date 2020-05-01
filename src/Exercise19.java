@@ -43,7 +43,8 @@ public class Exercise19 {
 
         for (int k = 0; k < values.length - 3; k++) {
             for (int i = values.length - 4; i >= 0; i--) {
-                if (values[k][i+3] == values[k + 1][i + 2] && values[k][i] == values[k + 2][i + 1] && values[k][i] == values[k + 3][i ])
+                if (values[k][i+3] == values[k + 1][i + 2] && values[k][i+3] == values[k + 2][i + 1]
+                        && values[k][i+3] == values[k + 3][i ])
                     return true;
             }
         }
